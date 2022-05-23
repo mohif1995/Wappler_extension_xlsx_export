@@ -1,0 +1,54 @@
+[
+	{
+		"type": "XLSXExport",
+		"module": "XLSXExport",
+		"action": "XLSXExport",
+		"groupTitle": "Data Management",
+		"groupIcon": "fas fa-lg fa-file comp-files",
+		"title": "XLSX Export @@var(name)@@",
+		"icon": "fad fa-lg fa-file-excel comp-files",
+		"dataScheme": [],
+		"dataPick": true,
+		"dataPickObject": true,
+		"properties": [
+			{
+				"group": "Export xlsx File Properties",
+				"variables": [
+					{
+						"name": "XLSXExportName",
+						"optionName": "name",
+						"title": "Name",
+						"type": "text",
+						"required": true,
+						"defaultValue": ""
+					},
+					{
+						"name": "path",
+						"optionName": "path",
+						"title": "Path & File Name",
+						"type": "folder",
+						"defaultValue": "'/csv/'+UUID+'.xlsx'",
+						"serverDataBindings": true,
+						"required": true
+					},
+					
+					{
+						"name": "data",
+						"optionName": "data",
+						"title": "Export Data",
+						"type": "text",
+						"serverDataBindings": true,
+						"defaultValue": ""
+					},
+					{
+						"name": "output",
+						"optionName": "output",
+						"title": "Output",
+						"type": "boolean",
+						"defaultValue": false
+					}
+				]
+			}
+		]
+	}
+]

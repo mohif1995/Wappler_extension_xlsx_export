@@ -15,7 +15,7 @@
 				"group": "Export xlsx File Properties",
 				"variables": [
 					{
-						"name": "XLSXExportName",
+						"name": "name",
 						"optionName": "name",
 						"title": "Name",
 						"type": "text",
@@ -23,15 +23,44 @@
 						"defaultValue": ""
 					},
 					{
+						"name": "filename",
+						"optionName": "filename",
+						"title": "File Name",
+						"type": "text",
+						"defaultValue": "",
+						"serverDataBindings": true,
+						"help": "The length should less than 32",
+						"required": true
+					},
+					{
+						"name": "filetype",
+						"optionName": "filetype",
+						"title": "File Type",
+						"type": "text",
+						"defaultValue": "",
+						"serverDataBindings": true,
+						"help": "only one type should use like .xlsx support types are .xlsx ,.csv , more https://docs.sheetjs.com/docs/api/write-options/#supported-output-formats",
+						"required": true
+					},
+					{
+						"name": "sheetname",
+						"optionName": "sheetname",
+						"title": "WorkSheet Name",
+						"type": "text",
+						"defaultValue": "",
+						"serverDataBindings": true,
+						"help": "The length should less than 32 and not contain spical char",
+						"required": true
+					},
+					{
 						"name": "path",
 						"optionName": "path",
-						"title": "Path & File Name",
+						"title": "Path",
 						"type": "folder",
-						"defaultValue": "'/csv/'+UUID+'.xlsx'",
+						"defaultValue": "'/Download'",
 						"serverDataBindings": true,
 						"required": true
 					},
-					
 					{
 						"name": "data",
 						"optionName": "data",
